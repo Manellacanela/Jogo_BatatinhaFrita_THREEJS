@@ -13,11 +13,11 @@ document.body.appendChild(renderer.domElement);
 const loader = new THREE.GLTFLoader();
 
 
-loader.load("../tree/scene.gltf",function(gltf){
-	scene.add(gltf.scene);
-	gltf.scene.scale.set(16, 16, 16);
-	gltf.scene.position.set(0, -1, 0);
-})
+//loader.load("./tree/scene.gltf",function(gltf){
+	//scene.add(gltf.scene);
+	//gltf.scene.scale.set(16, 16, 16);
+	//gltf.scene.position.set(0, -1, 0);
+//})
 
 
 class Player{
@@ -72,11 +72,12 @@ function delay(ms){
 
 class boneca{
 	constructor(){
-		loader.load("../model/scene.gltf", (gltf)=>{
+		loader.load("./model/scene.gltf", (gltf)=>{
 		scene.add(gltf.scene);
 		gltf.scene.scale.set(0.4, 0.4, 0.4);
-		gltf.scene.position.set(0, -1, -1);
+		gltf.scene.position.set(0, -1, 0);
 		this.Boneca1 = gltf.scene;
+		this.Boneca1.ritation.y = -3;
 })
 	}
 
